@@ -40,5 +40,5 @@ It includes:
 
 - Authentication with authentication-zero
 - Standard for Linting
-- Litestack for production sqlite (see [litestack](https://github.com/oldmoe/litestack))
+- Optional: Litestack for production sqlite (see [litestack](https://github.com/oldmoe/litestack))
   - Check out fly.io's writeup on [how and why you might want to use sqlite in production on fly.io](https://fly.io/ruby-dispatch/sqlite-and-rails-in-production/)
