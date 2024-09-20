@@ -4,7 +4,7 @@ This is a collection of templates for Rails projects.
 
 ## Usage
 
-### Direct from GitHub
+### Direct from GitHub (recommended)
 
 ```bash
 rails new PROJECT_NAME --template https://raw.githubusercontent.com/RailsQuest/rails-templates/refs/heads/master/default.rb
@@ -16,6 +16,18 @@ rails new PROJECT_NAME --template https://raw.githubusercontent.com/RailsQuest/r
 git clone https://github.com/RailsQuest/rails-templates.git
 cd rails-templates
 rails new PROJECT_NAME --template default.rb
+```
+
+### Recommended `rails new` command
+
+I recommend using the following non-default commands to get the best experience:
+
+- Propshaft for asset pipeline, because Rails 8 makes it the default, so let's go with the grain for new projects.
+- Tailwind for CSS, because it is ubiquitous and effortless to install.
+- That's it! Enjoy!
+
+```bash
+rails new PROJECT_NAME --asset-pipeline propshaft --css tailwind --template https://raw.githubusercontent.com/RailsQuest/rails-templates/refs/heads/master/default.rb
 ```
 
 ## Templates
