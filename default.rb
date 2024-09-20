@@ -17,7 +17,7 @@ gem "flamegraph"
 gem "stackprof"
 gem "memory_profiler"
 
-if YAML.load_file("config/database.yml", aliases: true).dig("test", "adapter") == "sqlite3"
+if YAML.safe_load_file("config/database.yml", aliases: true).dig("test", "adapter") == "sqlite3"
   gem "litestack"
 end
 
