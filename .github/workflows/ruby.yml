@@ -31,7 +31,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set git author
-      run: git config user.email "bogus@test.com" && git config user.name "Humphrey Bogus"
+      run: git config --global user.email "bogus@test.com" && git config --global user.name "Humphrey Bogus"
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
