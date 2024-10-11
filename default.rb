@@ -17,12 +17,14 @@ gem "flamegraph"
 gem "stackprof"
 gem "memory_profiler"
 
-if YAML.safe_load_file("config/database.yml", aliases: true).dig("test", "adapter") == "sqlite3"
+install_litestack = Rails.version.to_f < 8 && YAML.safe_load_file("config/database.yml", aliases: true).dig("test", "adapter") == "sqlite3"
+
+if install_litestack
   gem "litestack"
 end
 
 after_bundle do
-  generate "litestack:install"
+  generate "litestack:install" if install_litestack
   generate "authentication"
   run "bundle install --quiet"
   rails_command "db:migrate"
