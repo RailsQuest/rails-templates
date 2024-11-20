@@ -11,6 +11,9 @@ end
 # Auth
 gem "authentication-zero"
 
+# UI
+gem "css-zero" unless options[:css]
+
 # Performance
 gem "rack-mini-profiler"
 gem "flamegraph"
@@ -25,7 +28,14 @@ end
 
 after_bundle do
   generate "litestack:install" if install_litestack
-  generate "authentication"
+
+  unless options[:css]
+    generate "css_zero:install"
+    generate "css_zero:add", "layouts", "flash", "button", "form", "input", "input_concerns", "switch", "card", "breadcrumb"
+  end
+
+  generate "authentication", "--pwned", "--passwordless", "--trackable", "--invitable", "--masqueradable", "--sudoable"
+
   run "bundle install --quiet"
   rails_command "db:migrate"
 
