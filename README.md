@@ -18,16 +18,21 @@ cd rails-templates
 rails new PROJECT_NAME --template default.rb
 ```
 
-### Recommended `rails new` command
+### Recommended `rails new` command for Rails 8
 
-I recommend using the following non-default commands to get the best experience:
-
-- Propshaft for asset pipeline, because Rails 8 makes it the default, so let's go with the grain for new projects.
-- Tailwind for CSS, because it is ubiquitous and effortless to install.
-- That's it! Enjoy!
+Just use the Rails defaults! 😎
 
 ```bash
-rails new PROJECT_NAME --asset-pipeline propshaft --css tailwind --template https://raw.githubusercontent.com/RailsQuest/rails-templates/refs/heads/master/default.rb
+rails new PROJECT_NAME --template https://raw.githubusercontent.com/RailsQuest/rails-templates/refs/heads/master/default.rb
+```
+
+### Recommended `rails new` command for pre-Rails 8
+
+I recommend using propshaft since it's the new default asset pipeline in Rails 8.
+That's it! 😎
+
+```bash
+rails new PROJECT_NAME --asset-pipeline propshaft --template https://raw.githubusercontent.com/RailsQuest/rails-templates/refs/heads/master/default.rb
 ```
 
 ## Templates
